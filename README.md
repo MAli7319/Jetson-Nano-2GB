@@ -20,3 +20,4 @@
 ### CSI Camera
 * https://github.com/JetsonHacksNano/CSI-Camera
 * https://automaticaddison.com/how-to-set-up-a-camera-for-nvidia-jetson-nano/
+* https://automaticaddison.com/how-to-install-opencv-4-5-on-nvidia-jetson-nano/
