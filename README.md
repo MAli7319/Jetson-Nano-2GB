@@ -16,3 +16,7 @@
 * https://blog.openzeka.com/otonom-araclar/jetson-terminal-kurulumu/
 * https://developer.nvidia.com/embedded/learn/tutorials/vnc-setup
 * https://www.stereolabs.com/blog/ros-and-nvidia-jetson-nano
+
+### CSI Camera
+* https://github.com/JetsonHacksNano/CSI-Camera
+* https://automaticaddison.com/how-to-set-up-a-camera-for-nvidia-jetson-nano/
