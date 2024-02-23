@@ -25,6 +25,10 @@
   * `sudo ./apply_binaries.sh`
 
  * At this stage, the SD card should be placed in Jetson Nano, and switch the Nano to the recovery mode by connecting FC REG and GND pins with jumper cable. After doing that, connect the Nano with your host PC by using micro-USB cable, and power the Nano.
+ * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j2.jpg" width="400" height="300">
+ * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j3.jpg" width="400" height="300">
+ * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j4.jpg" width="400" height="300">
+
  * When you run `lsusb` command, the devices connected to your PC are listed. If you notice something like *NVIDIA Corp. APX*, the previous step is successful.
  * Lastly, you should run this command to finalize the setup (This may take some time):
    * `sudo ./flash.sh jetson-nano-devkit mmcblk0p1`
