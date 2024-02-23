@@ -55,6 +55,13 @@
 * For face detection demo, OpenCV installation needed.
 
 ## OpenCV Installation
+* `git clone https://github.com/JetsonHacksNano/installSwapfile.git`
+* `cd installSwapfile`
+* `./installSwapfile.sh`
+* reboot
+* `sudo gedit /etc/fstab`
+* comment *swapon* line
+
 * https://www.ismaildurcan.com.tr/jetson-nano-bellek-swapfile-yukseltme-1/
 * https://www.ismaildurcan.com.tr/jetson-nanoya-yolov5-icin-opencv-ve-pytorchun-cuda-destegiyle-kurulumu/
 * 
