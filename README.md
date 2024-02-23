@@ -56,13 +56,19 @@
 * `gst-launch-1.0 nvarguscamerasrc sensor_id=0 ! 'video/x-raw(memory:NVMM),width=3280, height=2464, framerate=21/1, format=NV12' ! nvvidconv flip-method=2 ! 'video/x-raw, width=816, height=616' ! nvvidconv ! nvegltransform ! nveglglessink -e`
 * For face detection demo, OpenCV installation needed.
 
-## OpenCV Installation
+## OpenCV and PyTorch Installation for YOLOv5 with CUDA support
 * `git clone https://github.com/JetsonHacksNano/installSwapfile.git`
 * `cd installSwapfile`
 * `./installSwapfile.sh`
-* reboot
-* `sudo gedit /etc/fstab`
-* comment *swapon* line
+* `git clone https://github.com/ultralytics/yolov5.git`
+* `git clone https://github.com/JetsonHacksNano/buildOpenCV.git`
+  * Open buildOpenCV.sh file
+  * Replace `time make -j$NUM_JOBS` with `time make -j1`
+  * Replace `time sudo make package -j$NUM_JOBS` with `time sudo make package -j1`
+* `cd buildOpenCV`
+* `./buildOpenCV.sh`
+* 
+
 
 * https://www.ismaildurcan.com.tr/jetson-nano-bellek-swapfile-yukseltme-1/
 * https://www.ismaildurcan.com.tr/jetson-nanoya-yolov5-icin-opencv-ve-pytorchun-cuda-destegiyle-kurulumu/
