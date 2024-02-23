@@ -39,6 +39,7 @@
   * `gsettings set org.gnome.Vino vnc-password $(echo -n 'YOUR_PASSWORD'|base64)`
   * `sudo reboot`
 
+## References
 * https://blog.openzeka.com/otonom-araclar/jetson-terminal-kurulumu/ (Accessed: 22th February 2024)
 * https://developer.nvidia.com/embedded/learn/tutorials/vnc-setup (Accessed: 22th February 2024)
 * https://www.stereolabs.com/blog/ros-and-nvidia-jetson-nano (Accessed: 22th February 2024)
