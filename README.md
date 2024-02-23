@@ -25,9 +25,9 @@
   * `sudo ./apply_binaries.sh`
 
  * At this stage, the SD card should be placed in Jetson Nano, and switch the Nano to the recovery mode by connecting FC REG and GND pins with jumper cable. After doing that, connect the Nano with your host PC by using micro-USB cable, and power the Nano.
-   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j2.jpg" width="400" height="300">
-   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j3.jpg" width="400" height="300">
-   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j4.jpg" width="400" height="300">
+   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j2.jpg" width="500" height="350">
+   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j3.jpg" width="500" height="350">
+   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j4.jpg" width="500" height="350">
 
  * When you run `lsusb` command, the devices connected to your PC are listed. If you notice something like *NVIDIA Corp. APX*, the previous step is successful.
  * Lastly, you should run this command to finalize the setup (This may take some time):
@@ -46,8 +46,8 @@
 
 ## CSI Camera
 * You have to connect the camera before booting the Nano
-   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j5.jpg" width="400" height="300">
-   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j6.jpg" width="400" height="300">
+   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j5_b.jpg" width="500" height="350">
+   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j6.jpg" width="500" height="350">
 * When you type `ls /dev/video0` in terminal, you should see */dev/video0* as output
 * Run for the test: `nvgstcapture-1.0 --orientation=2`
 * We can also run python script to use the camera. This repo will help us: https://github.com/JetsonHacksNano/CSI-Camera (Accessed: 22th February 2024)
