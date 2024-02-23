@@ -1,4 +1,5 @@
 # Jetson-Nano-2GB
+<img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j1.jpg" width="600" height="450">
 
 ## What you need?
 * Jetson Nano 2GB
