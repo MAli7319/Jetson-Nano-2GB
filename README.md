@@ -1,5 +1,5 @@
 # Jetson-Nano-2GB
-<img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j1.jpg" width="600" height="450">
+<img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/jetson_imgs/j1.jpg" width="600" height="450">
 
 ## What you need?
 * Jetson Nano 2GB
@@ -24,10 +24,15 @@
   * `cd ..`
   * `sudo ./apply_binaries.sh`
 
- * At this stage, the SD card should be placed in Jetson Nano, and switch the Nano to the recovery mode by connecting FC REG and GND pins with jumper cable. After doing that, connect the Nano with your host PC by using micro-USB cable, and power the Nano.
-   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j2.jpg" width="500" height="350">
-   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j3.jpg" width="500" height="350">
-   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j4.jpg" width="500" height="350">
+ * At this stage, the SD card should be placed in Jetson Nano:
+   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/jetson_imgs/j8.jpg" width="500" height="350">
+   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/jetson_imgs/j9.jpg" width="500" height="350">
+   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/jetson_imgs/j10.jpg" width="500" height="350">
+ * And switch the Nano to the recovery mode by connecting FC REG and GND pins with jumper cable.
+   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/jetson_imgs/j2.jpg" width="500" height="350">
+   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/jetson_imgs/j3.jpg" width="500" height="350">
+   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/jetson_imgs/j4.jpg" width="500" height="350">
+ *  After doing that, connect the Nano with your host PC by using micro-USB cable, and power the Nano.
 
  * When you run `lsusb` command, the devices connected to your PC are listed. If you notice something like *NVIDIA Corp. APX*, the previous step is successful.
  * Lastly, you should run this command to finalize the setup (This may take some time):
@@ -46,8 +51,10 @@
 
 ## CSI Camera
 * You have to connect the camera before booting the Nano
-   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j5_b.jpg" width="500" height="350">
-   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/j6.jpg" width="500" height="350">
+   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/jetson_imgs/j5.jpg" width="500" height="350">
+   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/jetson_imgs/j6.jpg" width="500" height="350">
+   * The camera should look towards to the Nano as you can see in the figure
+   * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/jetson_imgs/j7.jpg" width="500" height="350">
 * When you type `ls /dev/video0` in terminal, you should see */dev/video0* as output
 * Run for the test: `nvgstcapture-1.0 --orientation=2`
 * We can also run python script to use the camera. This repo will help us: https://github.com/JetsonHacksNano/CSI-Camera (Accessed: 22th February 2024)
@@ -67,12 +74,8 @@
   * Replace `time sudo make package -j$NUM_JOBS` with `time sudo make package -j1`
 * `cd buildOpenCV`
 * `./buildOpenCV.sh`
-* 
+* **Continue from here**
 
-
-* https://www.ismaildurcan.com.tr/jetson-nano-bellek-swapfile-yukseltme-1/
-* https://www.ismaildurcan.com.tr/jetson-nanoya-yolov5-icin-opencv-ve-pytorchun-cuda-destegiyle-kurulumu/
-* 
 
 ## ROS Melodic Installation
 * `sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'`
@@ -91,4 +94,7 @@
 * https://blog.openzeka.com/otonom-araclar/jetson-terminal-kurulumu/ (Accessed: 22th February 2024)
 * https://developer.nvidia.com/embedded/learn/tutorials/vnc-setup (Accessed: 22th February 2024)
 * https://automaticaddison.com/how-to-set-up-a-camera-for-nvidia-jetson-nano/ (Accessed: 22th February 2024)
+* https://github.com/JetsonHacksNano/CSI-Camera/issues/31 (Accessed: 23th February 2024)
+* https://www.ismaildurcan.com.tr/jetson-nano-bellek-swapfile-yukseltme-1/ (Accessed: 23th February 2024)
+* https://www.ismaildurcan.com.tr/jetson-nanoya-yolov5-icin-opencv-ve-pytorchun-cuda-destegiyle-kurulumu/ (Accessed: 23th February 2024)
 * https://www.stereolabs.com/blog/ros-and-nvidia-jetson-nano (Accessed: 22th February 2024)
