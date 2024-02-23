@@ -39,12 +39,25 @@
   * `gsettings set org.gnome.Vino vnc-password $(echo -n 'YOUR_PASSWORD'|base64)`
   * `sudo reboot`
 
+## CSI Camera
+* You have to connect the camera before booting the Nano
+* When you type `ls /dev/video0` in terminal, you should see */dev/video0* as output
+* Run for the test: `nvgstcapture-1.0 --orientation=2`
+* We can also run python script to use the camera. This repo will help us: https://github.com/JetsonHacksNano/CSI-Camera (Accessed: 22th February 2024)
+* `git clone https://github.com/JetsonHacksNano/CSI-Camera.git`
+* `cd CSI-Camera`
+* `gst-launch-1.0 nvarguscamerasrc sensor_id=0 ! 'video/x-raw(memory:NVMM),width=3280, height=2464, framerate=21/1, format=NV12' ! nvvidconv flip-method=2 ! 'video/x-raw, width=816, height=616' ! nvvidconv ! nvegltransform ! nveglglessink -e`
+* For face detection demo, OpenCV installation needed.
+
+## OpenCV Installation
+* 
+
+Skip 2 questions with pressing enter OPENCV
+Restart the docker demon=yes
+
+
 ## References
 * https://blog.openzeka.com/otonom-araclar/jetson-terminal-kurulumu/ (Accessed: 22th February 2024)
 * https://developer.nvidia.com/embedded/learn/tutorials/vnc-setup (Accessed: 22th February 2024)
-* https://www.stereolabs.com/blog/ros-and-nvidia-jetson-nano (Accessed: 22th February 2024)
-
-### CSI Camera
-* https://github.com/JetsonHacksNano/CSI-Camera (Accessed: 22th February 2024)
 * https://automaticaddison.com/how-to-set-up-a-camera-for-nvidia-jetson-nano/ (Accessed: 22th February 2024)
-* https://automaticaddison.com/how-to-install-opencv-4-5-on-nvidia-jetson-nano/ (Accessed: 22th February 2024)
+* https://www.stereolabs.com/blog/ros-and-nvidia-jetson-nano (Accessed: 22th February 2024)
