@@ -50,10 +50,9 @@
 * For face detection demo, OpenCV installation needed.
 
 ## OpenCV Installation
+* https://www.ismaildurcan.com.tr/jetson-nano-bellek-swapfile-yukseltme-1/
+* https://www.ismaildurcan.com.tr/jetson-nanoya-yolov5-icin-opencv-ve-pytorchun-cuda-destegiyle-kurulumu/
 * 
-
-Skip 2 questions with pressing enter OPENCV
-Restart the docker demon=yes
 
 
 ## References
