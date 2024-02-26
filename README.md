@@ -109,10 +109,12 @@
     ```
  * #### PyTorch Installation
    - ```
-     wget https://nvidia.box.com/shared/static/p57jwntv436lfrd78inwl7iml6p13fzh.whl -O torch-1.10.0-cp36-cp36m-linux_aarch64.whl
-     sudo apt-get install python3-pip libopenblas-base libopenmpi-dev libomp-dev
-     pip3 install torch-1.10.0-cp36-cp36m-linux_aarch64.whl --no-deps
+     wget https://nvidia.box.com/shared/static/ncgzus5o23uck9i5oth2n8n06k340l6k.whl -O torch-1.4.0-cp36-cp36m-linux_aarch64.whl
+     sudo apt-get install python3-pip libopenblas-base libopenmpi-dev 
+     pip3 install Cython
+     pip3 install numpy torch-1.4.0-cp36-cp36m-linux_aarch64.whl
      sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
+     git config --global http.postBuffer 524288000
      git clone --branch v0.9.0 https://github.com/pytorch/vision torchvision
      
      ```
@@ -145,4 +147,7 @@
 * https://github.com/JetsonHacksNano/CSI-Camera/issues/31 (Accessed: 23th February 2024)
 * https://www.ismaildurcan.com.tr/jetson-nano-bellek-swapfile-yukseltme-1/ (Accessed: 23th February 2024)
 * https://www.ismaildurcan.com.tr/jetson-nanoya-yolov5-icin-opencv-ve-pytorchun-cuda-destegiyle-kurulumu/ (Accessed: 23th February 2024)
+* https://forums.developer.nvidia.com/t/installing-pytorch-oserror-libcurand-so-10-cannot-open-shared-object-file-no-such-file-or-directory/165044/4 (Accessed: 26th February 2024)
+* https://stackoverflow.com/questions/38618885/error-rpc-failed-curl-transfer-closed-with-outstanding-read-data-remaining (Accessed: 26th February 2024)
+* https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048 (Accessed: 26th February 2024)
 * https://www.stereolabs.com/blog/ros-and-nvidia-jetson-nano (Accessed: 22th February 2024)
