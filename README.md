@@ -26,6 +26,7 @@ Welcome to the installation guide of Jetson Nano 2GB. This guide involves:
     mkdir jetson_install
     mv ~/Downloads/Jetson-210_Linux_R32.7.1_aarch64.tbz2 jetson_install
     mv ~/Downloads/Tegra_Linux_Sample-Root-Filesystem_R32.7.1_aarch64.tbz2 jetson_install
+    cd jetson_install/
     tar xf Jetson-210_Linux_R32.7.1_aarch64.tbz2
     cd Linux_for_Tegra/rootfs/
     sudo tar xpf ../../Tegra_Linux_Sample-Root-Filesystem_R32.7.1_aarch64.tbz2
