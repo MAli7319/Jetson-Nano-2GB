@@ -1,6 +1,6 @@
 # Jetson-Nano-2GB Installation Guide
 Welcome to the installation guide of Jetson Nano 2GB. This guide involves:
-* JetPack Installation
+* JetPack v4.6.1 Installation
 * VNC Setup
 * CSI Camera Setup
 * OpenCV Installation
@@ -15,7 +15,7 @@ Welcome to the installation guide of Jetson Nano 2GB. This guide involves:
 * SD Card
 * External monitor
 
-## JetPack Installation
+## JetPack v4.6.1 Installation
 * You should download 2 files below (you can also find them on https://developer.nvidia.com/embedded/linux-tegra-r3271 if the links do not work):
   * *L4T Driver Package (BSP)*: https://developer.nvidia.com/embedded/l4t/r32_release_v7.1/t210/jetson-210_linux_r32.7.1_aarch64.tbz2 (Accessed: 22th February 2024)
   * *Sample Root Filesystem*: https://developer.nvidia.com/embedded/l4t/r32_release_v7.1/t210/tegra_linux_sample-root-filesystem_r32.7.1_aarch64.tbz2 (Accessed: 22th February 2024)
