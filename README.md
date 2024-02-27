@@ -1,4 +1,11 @@
-# Jetson-Nano-2GB
+# Jetson-Nano-2GB Installation Guide
+Welcome to the installation guide of Jetson Nano 2GB. This guide involves:
+* JetPack Installation
+* VNC Setup
+* CSI Camera Setup
+* OpenCV Installation
+* ROS Melodic Installation
+* References
 <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/jetson_imgs/j1.jpg" width="600" height="450">
 
 ## What you need?
@@ -8,7 +15,7 @@
 * SD Card
 * External monitor
 
-## Installation
+## JetPack Installation
 * You should download 2 files below (you can also find them on https://developer.nvidia.com/embedded/linux-tegra-r3271 if the links do not work):
   * *L4T Driver Package (BSP)*: https://developer.nvidia.com/embedded/l4t/r32_release_v7.1/t210/jetson-210_linux_r32.7.1_aarch64.tbz2 (Accessed: 22th February 2024)
   * *Sample Root Filesystem*: https://developer.nvidia.com/embedded/l4t/r32_release_v7.1/t210/tegra_linux_sample-root-filesystem_r32.7.1_aarch64.tbz2 (Accessed: 22th February 2024)
@@ -53,7 +60,7 @@
     sudo reboot
     ```
 
-## CSI Camera
+## CSI Camera Setup
 * You have to connect the camera before booting the Nano
    * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/jetson_imgs/j5.jpg" width="500" height="350">
    * <img src="https://github.com/MAli7319/Jetson-Nano-2GB/blob/main/jetson_imgs/j6.jpg" width="500" height="350">
@@ -68,24 +75,28 @@
   gst-launch-1.0 nvarguscamerasrc sensor_id=0 ! 'video/x-raw(memory:NVMM),width=3280, height=2464, framerate=21/1, format=NV12' ! nvvidconv flip-method=2 ! 'video/x-raw, width=816, height=616' ! nvvidconv ! nvegltransform ! nveglglessink -e
   ```
 * For face detection demo, OpenCV installation needed.
+* After installation, run `python face_detect.py` inside the *CSI-Camera* directory
+  * If it did not work properly, open *face_detect.py* file and change the parameters:
+    * framerate=21
+    * flip_method=2
+  * And run it again
 
-## OpenCV and PyTorch Installation for YOLOv5 with CUDA support
-* #### OpenCV Installation
-  * ```
-    git clone https://github.com/JetsonHacksNano/installSwapfile.git
-    cd installSwapfile
-    ./installSwapfile.sh
-    git clone https://github.com/ultralytics/yolov5.git
-    git clone https://github.com/JetsonHacksNano/buildOpenCV.git
-    ```
-    * Open buildOpenCV.sh file
-    * Replace `time make -j$NUM_JOBS` with `time make -j1`
-    * Replace `time sudo make package -j$NUM_JOBS` with `time sudo make package -j1`
-  * ```
-    cd buildOpenCV
-    ./buildOpenCV.sh
-    sudo reboot
-    ```
+## OpenCV Installation for Face Detection Demo
+* ```
+  git clone https://github.com/JetsonHacksNano/installSwapfile.git
+  cd installSwapfile
+  ./installSwapfile.sh
+  git clone https://github.com/ultralytics/yolov5.git
+  git clone https://github.com/JetsonHacksNano/buildOpenCV.git
+  ```
+  * Open buildOpenCV.sh file
+  * Replace `time make -j$NUM_JOBS` with `time make -j1`
+  * Replace `time sudo make package -j$NUM_JOBS` with `time sudo make package -j1`
+* ```
+  cd buildOpenCV
+  ./buildOpenCV.sh
+  sudo reboot
+  ```
 * #### Library Installations
   * ```
     sudo apt install python3-pip
@@ -108,21 +119,10 @@
     pip3 install scipy==1.4.1
     ```
  * #### PyTorch Installation
-   - ```
-     wget https://nvidia.box.com/shared/static/ncgzus5o23uck9i5oth2n8n06k340l6k.whl -O torch-1.4.0-cp36-cp36m-linux_aarch64.whl
-     sudo apt-get install python3-pip libopenblas-base libopenmpi-dev 
-     pip3 install Cython
-     pip3 install numpy torch-1.4.0-cp36-cp36m-linux_aarch64.whl
-     sudo apt-get install libjpeg-dev zlib1g-dev libpython3-dev libavcodec-dev libavformat-dev libswscale-dev
-     git config --global http.postBuffer 524288000
-     git clone --branch v0.9.0 https://github.com/pytorch/vision torchvision
-     
-     ```
+   - Not available due to given errors
 
  * #### RealSenseSDK Installation
-   * ```
-     
-     ```
+   * Not available due to given errors
 
 
 ## ROS Melodic Installation
