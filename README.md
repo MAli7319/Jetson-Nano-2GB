@@ -12,6 +12,7 @@ Welcome to the installation guide of Jetson Nano 2GB. This guide involves:
 * Jetson Nano 2GB
 * Host PC with Ubuntu OS (Virtual machine is not recommended)
 * Micro-USB cable to connect Jetson with your computer
+* Female Jumper Cable
 * SD Card
 * External monitor
 
@@ -48,6 +49,7 @@ Welcome to the installation guide of Jetson Nano 2GB. This guide involves:
  * Lastly, you should run this command to finalize the setup (This may take some time):
    * `sudo ./flash.sh jetson-nano-devkit mmcblk0p1`
  * If you connect the Nano with an external monitor, you should see the setup wizard on the screen. The rest is classic Ubuntu setup.
+ * After setup, you can disconnect the jumper cable and Micro-USB.
 
 ## VNC Setup
 * Open the terminal of the Nano, and type:
